@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="40fa23504af74bc39f33f885a5ff814c" Name="Diagram1">
+        <EntityTypeShape EntityType="ShopZoneModel.Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopZoneModel.Customer" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopZoneModel.LoginUser" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopZoneModel.OrderTracking" Width="1.5" PointX="4.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopZoneModel.Role" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShopZoneModel.Newsletter" Width="1.5" PointX="2.625" PointY="5.75" />
+        <EntityTypeShape EntityType="ShopZoneModel.Product" Width="1.5" PointX="6.875" PointY="0.75" />
+        <EntityTypeShape EntityType="ShopZoneModel.Contact" Width="1.5" PointX="6.5277383506892894" PointY="28.717832101843243" />
+        <EntityTypeShape EntityType="ShopZoneModel.Size" Width="1.5" PointX="10.821543506729205" PointY="13.852588391794166" />
+        <EntityTypeShape EntityType="ShopZoneModel.Coupon" Width="1.5" PointX="8.5" PointY="5.75" />
+        <EntityTypeShape EntityType="ShopZoneModel.CustomerOrder" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ShopZoneModel.Feedback" Width="1.5" PointX="2.3042837876380808" PointY="13.883986077217379" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

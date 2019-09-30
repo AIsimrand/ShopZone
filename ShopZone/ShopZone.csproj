@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{51A5E24F-056A-42BD-9051-C0E963F90ABA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShopZone</RootNamespace>
+    <AssemblyName>ShopZone</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Categories.aspx" />
+    <Content Include="Admin\SaveCoupon.aspx" />
+    <Content Include="Admin\Coupons.aspx" />
+    <Content Include="Admin\SaveSubCategory.aspx" />
+    <Content Include="Admin\SubCategories.aspx" />
+    <Content Include="Admin\Customers.aspx" />
+    <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\SaveCustomer.aspx" />
+    <Content Include="Admin\SaveProduct.aspx" />
+    <Content Include="Admin\Orders.aspx" />
+    <Content Include="Admin\Products.aspx" />
+    <Content Include="Admin\SaveCategory.aspx" />
+    <Content Include="Admin\SaveUser.aspx" />
+    <Content Include="Admin\Subscriptions.aspx" />
+    <Content Include="Admin\UserDetails.aspx" />
+    <Content Include="Admin\Users.aspx" />
+    <Content Include="Admin\ViewOrder.aspx" />
+    <Content Include="Cart\Confirmation.aspx" />
+    <Content Include="Cart\Payment.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\etalage.css" />
+    <Content Include="Content\css\form.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Details.aspx" />
+    <Content Include="FeedBack.aspx" />
+    <Content Include="forgot.aspx" />
+    <Content Include="images\a-star.png" />
+    <Content Include="images\Adidas Men%27s Furio LITE M Running Shoes.jpg" />
+    <Content Include="images\allensolly.jpg" />
+    <Content Include="images\anarkali gown.jpg" />
+    <Content Include="images\anarkali long gown.jpg" />
+    <Content Include="images\arrow1.png" />
+    <Content Include="images\arrow2.png" />
+    <Content Include="images\avatar.png" />
+    <Content Include="images\b-arrow.png" />
+    <Content Include="images\ba.jpg" />
+    <Content Include="images\baa.jpg" />
+    <Content Include="images\bag.jpg" />
+    <Content Include="images\bag1.jpg" />
+    <Content Include="images\bo.jpg" />
+    <Content Include="images\bott.jpg" />
+    <Content Include="images\bottle.jpg" />
+    <Content Include="images\casual shirt full sleeves.jpg" />
+    <Content Include="images\casual t-shirt.jpg" />
+    <Content Include="images\ch.jpg" />
+    <Content Include="images\citizen Analog-Digital Black Dial Men%27s Watch.jpg" />
+    <Content Include="images\Emporio Armani Analog Multi-Colour Dial Women%27s Watch.jpg" />
+    <Content Include="images\Emporio Armani Gianni T-bar Analog Grey Dial Women%27s Watch%2822,390%29.jpg" />
+    <Content Include="images\eyebogler t-shirt.jpg" />
+    <Content Include="images\facebook.png" />
+    <Content Include="images\floral dress.jpg" />
+    <Content Include="images\Fossil Rose Dial Women%27s Watch.jpg" />
+    <Content Include="images\full sleeves polo t-shirt.jpg" />
+    <Content Include="images\gown.jpg" />
+    <Content Include="images\gpluse.png" />
+    <Content Include="images\img-sprite.png" />
+    <Content Include="images\img\02.jpg" />
+    <Content Include="images\img\04.jpg" />
+    <Content Include="images\img\05.jpg" />
+    <Content Include="images\img\09.jpg" />
+    <Content Include="images\img\a12.png" />
+    <Content Include="images\img\b05.png" />
+    <Content Include="images\img\loading.gif" />
+    <Content Include="images\katso hoody t-shirt.jpg" />
+    <Content Include="images\label_new.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\maxi dress.jpg" />
+    <Content Include="images\mens sweatshirt.jpg" />
+    <Content Include="images\Nike Men%27s Revolution 4 Running Shoes.jpg" />
+    <Content Include="images\pi.jpg" />
+    <Content Include="images\pi1.jpg" />
+    <Content Include="images\pi2.jpg" />
+    <Content Include="images\pi3.jpg" />
+    <Content Include="images\pi4.jpg" />
+    <Content Include="images\pic.jpg" />
+    <Content Include="images\pic1.jpg" />
+    <Content Include="images\pic10.jpg" />
+    <Content Include="images\pic11.jpg" />
+    <Content Include="images\pic12.jpg" />
+    <Content Include="images\pic13.jpg" />
+    <Content Include="images\pic2.jpg" />
+    <Content Include="images\pic3.jpg" />
+    <Content Include="images\pic4.jpg" />
+    <Content Include="images\pic5.jpg" />
+    <Content Include="images\pic6.jpg" />
+    <Content Include="images\pic7.jpg" />
+    <Content Include="images\pic8.jpg" />
+    <Content Include="images\pleated skirt with belt%283990%29.jpg" />
+    <Content Include="images\poppy-dress-retro-clothing.png" />
+    <Content Include="images\Rado D Star.jpg" />
+    <Content Include="images\review.png" />
+    <Content Include="images\rss.png" />
+    <Content Include="images\s1.jpg" />
+    <Content Include="images\s2.jpg" />
+    <Content Include="images\s3.jpg" />
+    <Content Include="images\s4.jpg" />
+    <Content Include="images\sh.jpg" />
+    <Content Include="images\si1.jpg" />
+    <Content Include="images\si2.jpg" />
+    <Content Include="images\si3.jpg" />
+    <Content Include="images\si4.jpg" />
+    <Content Include="images\star.png" />
+    <Content Include="images\style kurta.png" />
+    <Content Include="images\tick1.png" />
+    <Content Include="images\twitter.png" />
+    <Content Include="images\V-Neck cashmere sweater%289990%29.jpg" />
+    <Content Include="images\v-neck party dress.jpg" />
+    <Content Include="images\wa.jpg" />
+    <Content Include="images\waist coat style t-shirt.jpg" />
+    <Content Include="images\wat.jpg" />
+    <Content Include="images\Zara-Coats-for-Women-5.jpg" />
+    <Content Include="images\zoom.png" />
+    <Content Include="Content\js\jquery.etalage.min.js" />
+    <Content Include="Content\js\jquery.flexisel.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\jquery.wmuSlider.js" />
+    <Content Include="Content\ProductImage\1.jpg" />
+    <Content Include="Content\ProductImage\2.jpg" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Product.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Scripts\2\deep-minified.html" />
+    <Content Include="Scripts\2\img\02.jpg" />
+    <Content Include="Scripts\2\img\04.jpg" />
+    <Content Include="Scripts\2\img\05.jpg" />
+    <Content Include="Scripts\2\img\09.jpg" />
+    <Content Include="Scripts\2\img\a12.png" />
+    <Content Include="Scripts\2\img\b05.png" />
+    <Content Include="Scripts\2\img\loading.gif" />
+    <Content Include="Scripts\2\js\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\2\js\jquery.wmuSlider.js" />
+    <Content Include="Scripts\2\js\jssor.slider.debug.js" />
+    <Content Include="Scripts\2\js\jssor.slider.min.js" />
+    <Content Include="Scripts\2\js\jssor.slider.mini.js" />
+    <Content Include="Scripts\2\no-jquery.html" />
+    <Content Include="Scripts\2\with-jquery.html" />
+    <Content Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="packages.config" />
+    <Content Include="images\Thumbs.db" />
+    <EntityDeploy Include="Entity\Entity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Entity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Entity\Entity.edmx.diagram">
+      <DependentUpon>Entity.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.0.js" />
+    <Content Include="Scripts\jquery-2.2.0.min.js" />
+    <Content Include="Scripts\jssor.slider.debug.js" />
+    <Content Include="Scripts\jssor.slider.min.js" />
+    <Content Include="Scripts\jssor.slider.mini.js" />
+    <Content Include="ShoppingCart.aspx" />
+    <Content Include="Cart\ShippingDetails.aspx" />
+    <Content Include="SqlScript\CREATE_TABLE.sql" />
+    <Content Include="SqlScript\DROP_TABLE.sql" />
+    <Content Include="SqlScript\Query.sql" />
+    <Content Include="User\Dashboard.aspx" />
+    <Content Include="User\MyOrders.aspx" />
+    <Content Include="User\ViewOrder.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-2.2.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SaveCoupon.aspx.cs">
+      <DependentUpon>SaveCoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SaveCoupon.aspx.designer.cs">
+      <DependentUpon>SaveCoupon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Coupons.aspx.cs">
+      <DependentUpon>Coupons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Coupons.aspx.designer.cs">
+      <DependentUpon>Coupons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SaveSubCategory.aspx.cs">
+      <DependentUpon>SaveSubCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SaveSubCategory.aspx.designer.cs">
+      <DependentUpon>SaveSubCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SubCategories.aspx.cs">
+      <DependentUpon>SubCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SubCategories.aspx.designer.cs">
+      <DependentUpon>SubCategories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customers.aspx.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Customers.aspx.designer.cs">
+      <DependentUpon>Customers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SaveCustomer.aspx.cs">
+      <DependentUpon>SaveCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SaveCustomer.aspx.designer.cs">
+      <DependentUpon>SaveCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SaveProduct.aspx.cs">
+      <DependentUpon>SaveProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SaveProduct.aspx.designer.cs">
+      <DependentUpon>SaveProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SaveCategory.aspx.cs">
+      <DependentUpon>SaveCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SaveCategory.aspx.designer.cs">
+      <DependentUpon>SaveCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SaveUser.aspx.cs">
+      <DependentUpon>SaveUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SaveUser.aspx.designer.cs">
+      <DependentUpon>SaveUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Subscriptions.aspx.cs">
+      <DependentUpon>Subscriptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Subscriptions.aspx.designer.cs">
+      <DependentUpon>Subscriptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserDetails.aspx.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserDetails.aspx.designer.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ViewOrder.aspx.cs">
+      <DependentUpon>ViewOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ViewOrder.aspx.designer.cs">
+      <DependentUpon>ViewOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart\Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart\Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart\Payment.aspx.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart\Payment.aspx.designer.cs">
+      <DependentUpon>Payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Entity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedBack.aspx.cs">
+      <DependentUpon>FeedBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeedBack.aspx.designer.cs">
+      <DependentUpon>FeedBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgot.aspx.cs">
+      <DependentUpon>forgot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgot.aspx.designer.cs">
+      <DependentUpon>forgot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\CartHelper.cs" />
+    <Compile Include="Helper\EmailHelper.cs" />
+    <Compile Include="Helper\SQLHelper.cs" />
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\AccountManager.cs" />
+    <Compile Include="Manager\CategoryManager.cs" />
+    <Compile Include="Manager\FeedbackManager.cs" />
+    <Compile Include="Manager\CouponManager.cs" />
+    <Compile Include="Manager\OrderManager.cs" />
+    <Compile Include="Manager\ProductManager.cs" />
+    <Compile Include="Model\GuidSessionIDManager.cs" />
+    <Compile Include="Model\Model.cs" />
+    <Compile Include="Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingCart.aspx.designer.cs">
+      <DependentUpon>ShoppingCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart\ShippingDetails.aspx.cs">
+      <DependentUpon>ShippingDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart\ShippingDetails.aspx.designer.cs">
+      <DependentUpon>ShippingDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\MyOrders.aspx.cs">
+      <DependentUpon>MyOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MyOrders.aspx.designer.cs">
+      <DependentUpon>MyOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\ViewOrder.aspx.cs">
+      <DependentUpon>ViewOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\ViewOrder.aspx.designer.cs">
+      <DependentUpon>ViewOrder.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\bootstrap\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+    <Content Include="User\User.Master" />
+    <Content Include="Admin\Admin.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55026</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3901/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

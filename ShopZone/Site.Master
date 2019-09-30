@@ -1,0 +1,270 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ShopZone.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title>Big shope A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
+    <link href="/Content/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!--theme-style-->
+    <link href="/Content/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+    <style type="text/css">
+        .success {
+            color: green;
+        }
+
+        .fail {
+            color: red;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="/Content/js/jquery.min.js"></script>
+    <script src="Scripts/jssor.slider.mini.js"></script>
+    <!--script-->
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+
+
+        <!--header-->
+        <div class="header">
+            <div class="top-header">
+                <div class="container">
+                    <div class="top-header-left">
+                        <ul class="support">
+                            <li><a href="#">
+                                <label></label>
+                            </a></li>
+                            <!--<li><a href="#">24x7 live<span class="live"> support</span></a></li>-->
+                        </ul>
+                        <ul class="support">
+                            <li class="van"><a href="#">
+                                <label></label>
+                            </a></li>
+                            <!--<li><a href="#">Free shipping <span class="live">on order over 500</span></a></li>-->
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="top-header-right" id="divWelcome" runat="server">
+                        Welcome,
+                        <asp:Literal ID="litUsername" runat="server"></asp:Literal>(<asp:LinkButton ID="hlnkLogout" runat="server" Text="Logout" OnClick="hlnkLogout_Click"></asp:LinkButton>)
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="bottom-header">
+                <div class="container">
+                    <div class="header-bottom-left">
+                        <div class="logo">
+                            <a href="/Index.aspx">
+                                <img src="/images/logo.png" alt=" " /></a>
+                        </div>
+                        <div class="search">
+
+                            <asp:TextBox ID="txtSearchText" runat="server" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}"></asp:TextBox>
+                            <asp:Button ID="btnSearch" runat="server" Text="SEARCH" OnClick="btnSearch_Click" />
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="header-bottom-right">
+                        <%--     <div class="account"><a href="/Login.aspx"><span></span>YOUR ACCOUNT</a></div>--%>
+                        <ul class="login" id="ulLogin" runat="server">
+                            <li><a href="/Login.aspx"><span></span>LOGIN</a></li>
+                            |
+								<li><a href="/Register.aspx">SIGNUP</a></li>
+                        </ul>
+                        <div class="cart"><a href="/ShoppingCart.aspx"><span></span>CART (<asp:Literal ID="litCartItemCount" runat="server" Text="0"></asp:Literal>)</a></div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="sub-cate">
+                <div class=" top-nav rsidebar span_1_of_left">
+                    <h3 class="cate">CATEGORIES</h3>
+
+
+                    <asp:Repeater ID="rptLeftMenu" runat="server" OnItemDataBound="rptLeftMenu_ItemDataBound">
+                        <HeaderTemplate>
+                            <ul class="menu">
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <li class="item1"><a href="/Product.aspx?CatId=<%# DataBinder.Eval(Container.DataItem, "Id") %>"><%# DataBinder.Eval(Container.DataItem, "Name") %>
+
+                                <img class="arrow-img" src="/images/arrow1.png" alt="" id="imgNestedArrow" runat="server" />
+                            </a>
+
+                                <asp:Repeater ID="rptLMSubCategories" runat="server">
+                                    <HeaderTemplate>
+                                        <ul class="cute" style="display: none;">
+                                    </HeaderTemplate>
+                                    <ItemTemplate>
+                                        <li class="subitem1"><a href="/Product.aspx?SCatId=<%# DataBinder.Eval(Container.DataItem, "Id") %>"><%# DataBinder.Eval(Container.DataItem, "Name") %> </a></li>
+                                    </ItemTemplate>
+
+                                    <FooterTemplate>
+                                        </ul>
+                                    </FooterTemplate>
+                                </asp:Repeater>
+
+
+                            </li>
+                        </ItemTemplate>
+                        <FooterTemplate>
+                            </ul>
+                        </FooterTemplate>
+                    </asp:Repeater>
+
+                </div>
+
+
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!---->
+        <div class="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="latter">
+                        <h6>NEWS-LETTER</h6>
+                        <div class="sub-left-right">
+                            <asp:TextBox ID="txtSubscribeEmailId" runat="server" placeholder="Enter email here"></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+    ErrorMessage="Invalid email address."    ControlToValidate="txtSubscribeEmailId" 
+    ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" 
+    Display="Dynamic">
+    </asp:RegularExpressionValidator>
+                            <asp:Button ID="btnSubScribe" runat="server" Text="SUBSCRIBE" OnClick="btnSubScribe_Click" />
+                            <br />
+                            <span id="spnNewsletterMsg" runat="server">
+                                <asp:Literal ID="litSubscribe" runat="server" Text=""></asp:Literal></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-bottom-cate">
+                        <h6>CATEGORIES</h6>
+
+
+
+                        <asp:Repeater ID="rptFooterCategories" runat="server">
+                            <HeaderTemplate>
+                                <ul>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+
+
+                                <li><a href="/Product.aspx?CatId=<%# DataBinder.Eval(Container.DataItem, "Id") %>"><%# DataBinder.Eval(Container.DataItem, "Name") %></a></li>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </ul>
+                            </FooterTemplate>
+                        </asp:Repeater>
+
+
+                    </div>
+                    <div class="footer-bottom-cate bottom-grid-cat">
+                        <h6>FEATURE PRODUCTS</h6>
+                        <asp:Repeater ID="rptFeaturedProduct" runat="server">
+                            <HeaderTemplate>
+                                <ul>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+
+
+                                <li><a href="/Details.aspx?Id=<%# DataBinder.Eval(Container.DataItem, "Id") %>"><%# DataBinder.Eval(Container.DataItem, "Name") %></a></li>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </ul>
+                            </FooterTemplate>
+                        </asp:Repeater>
+
+
+                    </div>
+                    <div class="footer-bottom-cate">
+                        <h6>TOP BRANDS</h6>
+
+                        <asp:Repeater ID="rptTopBrands" runat="server">
+                            <HeaderTemplate>
+                                <ul>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+
+
+                                <li><a href="/Product.aspx?CatId=<%# DataBinder.Eval(Container.DataItem, "Id") %>"><%# DataBinder.Eval(Container.DataItem, "Name") %></a></li>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </ul>
+                            </FooterTemplate>
+                        </asp:Repeater>
+
+                    </div>
+                    <div class="footer-bottom-cate cate-bottom">
+                        <%--<h6>OUR ADDERSS</h6>
+                        <ul>
+                            <li>Big Shoppe</li>
+                            <li>Land No. 10, Cavil Street,</li>
+                            <li>Kalbadevi</li>
+                            <li>Mumbai - 400002</li>
+                            <li>MAHARASHTRA, INDIA</li>
+                            <li class="phone">PH : +91 9823 07 02 25</li>
+                            <li class="temp">
+                                <p class="footer-class">&copy; <a href="mailto:rahulapandey95@ymail.com" target="_blank">Rahul Pandey</a> </p>
+                            </li>
+                        </ul>--%>
+                        <h6>SITEMAP</h6>
+                        <ul>
+                            <li><a href="/ContactUs.aspx">Contact Us</a></li>
+                             <li><a href="/Feedback.aspx">Feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--initiate accordion-->
+        <script type="text/javascript">
+            $(function () {
+                var menu_ul = $('.menu > li > ul'),
+                       menu_a = $('.menu > li > a');
+                menu_ul.hide();
+                menu_a.click(function (e) {
+                    e.preventDefault();
+                    if (!$(this).hasClass('active')) {
+                        menu_a.removeClass('active');
+                        menu_ul.filter(':visible').slideUp('normal');
+                        $(this).addClass('active').next().stop(true, true).slideDown('normal');
+                    } else {
+                        $(this).removeClass('active');
+                        $(this).next().stop(true, true).slideUp('normal');
+                    }
+                });
+
+            });
+        </script>
+    </form>
+</body>
+</html>
