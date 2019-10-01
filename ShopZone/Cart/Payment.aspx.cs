@@ -19,8 +19,11 @@ namespace ShopZone.Cart
         protected void btnMakePayment_Click(object sender, EventArgs e)
         {
             var cart = CartHelper.CurrentCart;
+
+            var transactionGuid = Guid.NewGuid();
             foreach (var item in cart)
             {
+                item.CartGUID = transactionGuid.ToString();
                 item.PaymentMode = rbtnPaymentMode.SelectedValue.ToString();
                 item.PaymentStatus = "SUCCESS";
 
@@ -32,7 +35,7 @@ namespace ShopZone.Cart
             var userInfo = (LoginUser)Session["UserInfo"];
             //EmailHelper.SendMail(userInfo.EmailId, "admin@shopzone.com", "", "Shopezone Order Placed", "You have placed you order for " + orders.FirstOrDefault().OrderProduct.Name);
             
-            EmailHelper.SendMail("rahulapandey95@gmail.com", "admin@shopzone.com", "", "Shopezone Order Placed", "You have placed you order for " + orders.FirstOrDefault().OrderProduct.Name);
+            EmailHelper.SendMail("simrand108@gmail.com", "admin@shopzone.com", "", "Shopezone Order Placed", "You have placed you order for " + orders.FirstOrDefault().OrderProduct.Name);
             Response.Redirect("~/User/ViewOrder.aspx?Id=" + orders.FirstOrDefault().CartGUID, false);
         }
 

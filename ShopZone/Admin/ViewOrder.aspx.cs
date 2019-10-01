@@ -37,7 +37,8 @@ namespace ShopZone.Admin
                     litPaymentStatus.Text = orderData.PaymentStatus;
 
                     var currentTransitData = orderData.OrderTrackingStatus.OrderByDescending(i => i.Id).FirstOrDefault();
-                    ddlTransitStatus.SelectedValue = currentTransitData.TransitStatus;
+                    if (currentTransitData != null)
+                        ddlTransitStatus.SelectedValue = currentTransitData.TransitStatus;
 
                     Repeater1.DataSource = orderData.OrderTrackingStatus;
                     Repeater1.DataBind();
