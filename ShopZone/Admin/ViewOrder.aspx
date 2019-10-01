@@ -30,7 +30,7 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label for="exampleInputEmail1"></label>
-                    <img id="imgProduct" runat="server" alt="" />
+                    <img id="imgProduct" runat="server" alt="" height="200" width="200" />
                 </div>
             </div>
         </div>

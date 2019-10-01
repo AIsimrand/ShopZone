@@ -17,7 +17,7 @@ namespace ShopZone
         {
             if (!Page.IsPostBack)
             {
-                SetReturnUrl(null);
+                SetReturnUrl(null);    
             }
         }
         private string SetReturnUrl(LoginUser user)

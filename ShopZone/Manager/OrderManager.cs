@@ -233,7 +233,6 @@ namespace ShopZone.Manager
 
             using (ShopZone.Entity.ShopZoneEntities entity = new Entity.ShopZoneEntities())
             {
-                var transactionGuid = Guid.NewGuid();
                 foreach (var order in orders)
                 {
                     var newOrder = new Entity.CustomerOrder
@@ -246,7 +245,7 @@ namespace ShopZone.Manager
                         CouponCode = order.CouponCode,
                         Discount = order.Discount,
                         AmountPaid = order.TotalAmount,
-                        CartGUID = transactionGuid.ToString(),
+                        CartGUID = order.CartGUID.ToString(),
                         PaymodeMode = order.PaymentMode,
                         PaymentStatus = order.PaymentStatus,
                         Description = "",
